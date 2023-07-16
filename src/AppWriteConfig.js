@@ -1,4 +1,4 @@
-import { Client, Databases } from "appwrite";
+import { Client, Databases, Account } from "appwrite";
 
 export const PROJECT_ID = process.env.PROJECT_ID;
 export const DATABASE_ID = process.env.REACT_APP_DATABASE_ID;
@@ -11,5 +11,6 @@ client
   .setProject(process.env.REACT_APP_PROJECT);
 
 export const databases = new Databases(client);
+export const account = new Account(client);
 
 export default client;

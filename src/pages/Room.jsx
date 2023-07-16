@@ -6,6 +6,7 @@ import client, {
 } from "../AppWriteConfig";
 import { ID, Query, Permission, Role } from "appwrite";
 import { Trash2 } from "react-feather";
+import Header from "../components/Header";
 
 const Room = () => {
   const [messages, setMessages] = useState([]);
@@ -76,6 +77,7 @@ const Room = () => {
 
   return (
     <main className="container">
+      <Header />
       <div className="room--container">
         <form id="message--form" onSubmit={handleSubmit}>
           <div>
